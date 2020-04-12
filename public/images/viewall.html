@@ -1,0 +1,20 @@
+<div>
+	<table border='2px' class='table'>
+		<thead>
+			<th>NAME</th>
+			<th>branch</th>
+			<th>semester</th>
+			<th>marks</th>
+		</thead>
+		<tr ng-repeat='m in members'>
+			<td>
+				{{m.name}}
+			</td>
+			<td>{{m.branch}}</td>
+			<td>{{m.semester}}</td>
+			<td>{{m.marks}}</td>
+		</tr>
+	</table>
+	<br>
+	<button style='width:170px' onclick="window.location.href='http://localhost:3000/#!admin/index'">Back </button>
+</div>

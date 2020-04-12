@@ -1,0 +1,55 @@
+<style>
+    #options
+    {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+</style>
+
+<div>
+    <table width='400px'>
+		
+		<tr>
+            <td>
+                {{cq.qno}}
+            </td>
+            <td>
+            {{cq.questionName}}
+            </td>
+        </tr>
+    </table>
+    <div id='options'>
+    <table>
+        <tr><td><pre>      </pre></td>
+            <td><input type="radio" name='op' ng-model='answere.op' vaule='cp.option1'>
+            {{cq.option1}}
+            
+            </td>
+        </tr>
+        <tr><td></td>
+            <td><input type="radio" name='op' ng-model='answer.op' vaule='cp.option2'>
+            {{cq.option2}}
+            </td>
+        </tr>
+        <tr><td></td>
+            <td><input type="radio" name='op' ng-model='answer.op' vaule='cp.option3'>
+            {{cq.option3}}
+            </td>
+        </tr>
+        <tr><td></td>
+            <td><input type="radio" name='op' ng-model='answer.op' vaule='cp.option4'>
+            {{cq.option4}}
+            </td>
+        </tr>
+    <tr>
+        <td>
+            {{score}}
+        </td>
+    </tr>
+    </table>
+    </div>
+    <br>
+    <button ng-click='nextq()'>NEXT</button>
+	<!--<button style='width:170px' onclick="window.location.href='http://localhost:3000/#!/quiz/{{question.qno+1}}'">NEXT</button>
+    -->
+    </div>
