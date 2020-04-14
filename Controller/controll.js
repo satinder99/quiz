@@ -40,7 +40,12 @@ exports.student_login=function(req,res)
 	{
 		if(err) throw err
 		if(result.length>=1)
-         { 
+        {
+            user = {uid : req.body.mysuid,
+                    password : req.body.myspassword
+                    }
+            console.log('USER IS >>>>>>>>>>>>>',user);
+            res.json(user);
             res.redirect('/#!/quiz');
         }
 		else
@@ -80,3 +85,14 @@ exports.questionReading = function(req,res)
         res.json(result);
     });  
 }
+
+exports.resultShow = function(req,res)
+{
+    question.find({},function(err,result)
+    {
+        if(err) throw err;
+        console.log(result);
+        res.json(result);
+    });  
+}
+

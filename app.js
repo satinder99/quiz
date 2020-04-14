@@ -40,5 +40,6 @@ app.route('/viewall').get(controllStudent.list_all_students);
 app.route('/login').post(controllStudent.student_login);
 app.route('/questionbank').post(controllStudent.questionStoring);
 app.route('/quiz').get(controllStudent.questionReading);
+app.route('/result').get(controllStudent.resultShow);
 
 module.exports = app;

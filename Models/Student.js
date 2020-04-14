@@ -8,5 +8,6 @@ var dataSchema=new schema(
         branch:{type:String},
         semester:{type:String},
         uid:{type:String},
+        marks:{type:Number},
 });
 module.exports=mongoose.model('students',dataSchema);
